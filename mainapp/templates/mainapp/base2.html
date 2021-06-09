@@ -1,0 +1,1103 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>INTRO|AKSHAT</title>
+
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+
+    <meta name="viewport" content="width=device, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto Slab">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+
+    <link rel = "icon" href="{% static 'mainapp/LOGO_2.png' %}" type="image/x-png">
+
+    <style>
+        body {
+        
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-image: url('{% static 'mainapp/back_2.jpg' %}');
+    background-color: black;
+}
+#last{
+    position: relative;
+    bottom: 0;
+    font-size: 8px;
+    text-align: center;
+}
+
+/*--------------------------------------MOBILE SCREEN VIEW------------------------------------------*/
+        :root {
+             --headerwidth: 340px;
+             --h2margin: 15px;
+             --pmainwidth: 300px;
+             --bar2width: 250px;
+             --percentwidth: 190px;
+             --skillsmargin: 60px;
+             --barwidth: 230px;
+             --intrestsmargin: -50px;
+             --paramargin: 30px;
+             --parasheight: 0px;
+             --paraeheight: 0px;
+             --paragheight: 0px;
+             --paraaheight: 0px;
+             --paracheight: 0px;
+             --symbolemargin: 20px;
+             --imarginright: 15px;
+             --contactfont: 20px;
+             --contactmargintop: 80px;
+             --gallerymargin: 25px;
+             --galblockw: 290px;
+             --galblockh: 190px;
+             --galimgh: 190px;
+             --galimgw: 290px;
+             --galfont: 10px;
+             --projectimg: 250px;
+             --projectmargin: 50px;
+             --knowmargin: 50px;
+             --introfont: 20px;
+             --h3font: 20px;
+             --h2font: 30px;
+             --whatfont: 20px;
+             --workfont: 20px;
+             --intrestalign: center;
+             --p3margin: 80px;
+             --p2margin: 20px;
+             --p3width: 50px;
+             --workw: 300px;
+             --workh: 180px;
+             --homefloat: none;
+             --navwidth: 380px;
+             --popupwidth: 300px;
+             --popupheight: 302px;
+             --h1ppfont: 20px;
+             --starmargin: 50px;
+             --writemargin: 25px;
+             --writeh: 50px;
+             --writew: 250px;
+             --btnhpp: 40px;
+             --btnwpp: 130px;
+             --btnppfont: 15px;
+             --grayh: 235px;
+             --whatbullet: inline;
+             --contact2margin: 20px;
+             --contact2margint: -50px;
+             --contact2w: 300px;
+             --contact2h: 300px;
+             --contactw: 300px;
+             --contacth: 380px;
+             --emails: 20px;
+             --emailml: 11px;
+             --nums: 15px;
+	         --iconml: 8px;
+             --iconmb: 5px;	
+             --seebtnm: 30px;
+                }
+
+/*-------------------------------------DECKTOP SCREEN VIEW---------------------------------------------*/
+        @media screen and (min-width: 750px) {
+         :root {
+             --headerwidth: 1230px;
+             --h2margin: 200px;
+             --pmainwidth: 1170px;
+             --bar2width: 500px;
+             --percentwidth: 460px;
+             --skillsmargin: 350px;
+             --barwidth: 500px;
+             --intrestsmargin: 50px;
+             --paramargin: 150px;
+             --parasheight: 140px;
+             --paraeheight: 100px;
+             --paragheight: 100px;
+             --paraaheight: 100px;
+             --paracheight: 50px;
+             --symbolemargin: 400px;
+             --imarginright: 50px;
+             --contactfont: 60px;
+             --contactmargintop: 180px;
+             --gallerymargin: 300px;
+             --galblockw: 600px;
+             --galblockh: 400px;
+             --galimgh: 400px;
+             --galimgw: 600px;
+             --galfont: 15px;
+             --projectimg: 350px;
+             --projectmargin: 45px;
+             --knowmargin: 60px;
+             --introfont: 25px;
+             --h3font: 28px;
+             --h2font: 32px;
+             --whatfont: 25px;
+             --workfont: 25px;
+             --intrestalign: none;
+             --p3margin: 50px;
+             --p2margin: 50px;
+             --p3width: null;
+             --workw: 1000px;
+             --workh: 650px;
+             --homefloat: right;
+             --navwidth: 100%;
+             --popupwidth: 400px;
+             --popupheight: 350px;
+             --h1ppfont: 25px;
+             --starmargin: 100px;
+             --writemargin: 60px;
+             --writeh: 80px;
+             --writew: 280px;
+             --btnhpp: 60px;
+             --btnwpp: 179px;
+             --btnppfont: 20px;
+             --grayh: 283px;
+             --whatbullet: none;
+             --contact2margin: 130px;
+             --contact2margint: none;
+             --contact2w: 570px;
+             --contact2h: 420px;
+             --contactw: 350px;
+             --contacth: 420px;
+             --emails: 35px;
+             --emailml: 40px;
+             --nums: 22px;
+	         --iconml: 40px;
+             --iconmb: 8px;
+             --seebtnm: 80px;
+         }
+        }
+/*---------------------------------------------SECOND BACKGROUND PLAIN----------------------------------------------------*/
+
+        header{
+        background-color: rgba(0,0,0,0.6);
+        width: var(--headerwidth);
+        height: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 50px;
+        font-family: 'Roboto Slab';
+        text-shadow: 2px 2px 4px #000000;
+        }
+
+/*-------------------------------------------------------TEXT----------------------------------------------*/
+
+h1{
+	text-align: center;
+	color: white;
+	padding-top: 25px;
+	font-family: 'Poppins';
+
+	}
+h1.contact{
+	margin-top: var(--contactmargintop);
+	margin-bottom: var(--contactmargintop);
+	text_align: center;
+	font-size: var(--contactfont);
+	font-family: 'Poppins';
+	text-shadow: 2px 2px 4px #000000;
+}
+h2{
+    font-size: var(--h2font);
+	text-align: left;
+	position: relative;
+	color: white;
+	font-family: 'Poppins';
+	margin-left: var(--h2margin);
+	}
+h2.project{
+	font-family: 'Poppins';
+	text-align: left;
+	margin-left: 70px;
+}
+h3{
+    font-size: var(--h3font);
+	text-align: left;
+	color: white;
+	font-family: 'Poppins';
+	}
+h3.big{
+	font-size: 200%;
+	text-align: left;
+	color: white;
+	font-family: 'Poppins';
+   }
+p{
+	margin-top: 50px;
+	text-align: center;
+	color: white;
+	font-family: 'Poppins';
+	}
+p.main{
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	width: var(--pmainwidth);
+    font-size: var(--introfont);
+	color: white;
+	font-family: 'Poppins';
+	}
+p.ans{
+	margin-top: 50px;
+	text-align: left;
+	color: white;
+	font-family: 'Poppins';
+	}
+p.what{
+	text-align: left;
+	color: white;
+	width: 100%;
+	font-size: var(--whatfont);
+	font-family: 'Poppins';
+	margin-top: 20px;
+	margin-right: 100px;
+}
+p.p{
+	width: 300px;
+}
+p.btn{
+	border: 2px solid white;
+	margin-left: 280px;
+}
+a.see{
+    font-size: 15px;
+    color: white;
+    background-color: rgba(4, 129, 255, 0.4);
+    margin-left: var(--seebtnm);
+    margin-top: -15px;
+    border-radius: 10px;
+
+    animation: glowing 2500ms infinite;
+}
+@keyframes glowing {
+  0% { box-shadow: 0 0 -5px rgba(0, 0, 0, 0.5); }
+  40% { box-shadow: 0 0 10px rgba(255, 255, 255, 1); }
+  60% { box-shadow: 0 0 10px rgba(255, 255, 255, 1); }
+  100% { box-shadow: 0 0 -5px rgba(0, 0, 0, 0.5); }
+}
+
+p2{
+    width: 10px;
+    margin-left: var(--p2margin);
+    text-align: center;
+    font-size: var(--introfont);
+	color: white;
+	font-family: 'Poppins';
+}
+p3{
+    float: right;
+    text-align: center;
+    width: var(--p3width);
+    margin-right: var(--p3margin);
+    font-size: var(--introfont);
+	color: white;
+	font-family: 'Poppins';
+}
+p4{
+    display: block;
+    margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	margin-top: -20px;
+    font-size: var(--introfont);
+	color: white;
+	font-family: 'Poppins';
+}
+p1{
+	margin-top: 50px;
+	font-size: 25px;
+	color: white;
+	font-family: 'Poppins';
+	}
+
+span8{
+    display: var(--whatbullet);
+}
+
+p1.intrests{
+    text-align: var(--intrestalign);
+	margin-left: 80px;
+	margin-top: 20px;
+	background: rgba(0,0,0,0.5);
+	display: inline-block;
+	height: 45px;
+	width: 270px;
+	border: 1pv solid rgba(0,0,0,0.3);
+	border-radius: 3px;
+	overflow: hidden;
+	font-family: 'Poppins';
+	-webkit-transition-duration: 0.4s; /* Safari */
+	transition-duration: 0.4s;
+	}
+p1.intrests:hover {
+	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(255,255,255,0.19);
+	}
+p1.symbol{
+	text-align: center;
+	margin-left: var(--symbolemargin);
+	font-size: 20px;
+}
+
+section{font-family: 'Poppin'; }
+
+.container{
+	margin: 0 auto; 
+}
+
+.service-cards-wrapper{
+	display: flex; justify-content: center;
+	flex-wrap: wrap;
+	margin-top: 50px;
+}
+
+.service-card{
+	flex: 1 1 250px;
+	max-width: 300px; /* width of box*/
+	margin: 30px 15px; 
+	text-align: center;
+	background-color:rgba(0,0,0,0.6);
+	color: #565656;
+	padding: 50px 15px 25px;
+	border-radius: 5px;
+	box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+	position: relative;
+}
+
+.service-card .icon-container{
+	width: 40px; height: 40px;
+	color: rgb(255,255,255);
+	background-color: rgba(4, 129, 255, 0.5);
+	display: flex; justify-content: center;
+	align-items: center;
+	position: absolute;
+	top: 0; left: 50%;
+	transform: translate(-50%,-50%) rotate(45deg);
+}
+
+.service-card .icon-container i{ 
+    transform: rotate(-45deg); 
+    font-size: 25px; 
+    text-align: center;
+    margin-left: var(--iconml);
+    margin-bottom: var(--iconmb); 
+    text-shadow: 0px 0px #0000;
+    }
+
+
+
+.service-card p91{
+	font-size: 20px;
+	margin: 15px 0 25px;
+	line-height: 1.6;
+    text-shadow: 0px 0px #0000;
+    font-family: 'Poppins';
+    color: #fff;
+}
+	    
+	    
+ul.list{
+	list-style-type: circle;
+}
+i{
+	margin-left: 20px;
+	margin-right: var(--imarginright);
+}
+
+p1.contacts{
+    text-align: var(--intrestalign);
+	margin-left: 80px;
+	background: rgba(0,0,0,0.5);
+	display: inline-block;
+	height: 80px;
+	width: 480px;
+	border: 1pv solid rgba(0,0,0,0.3);
+	border-radius: 3px;
+	overflow: hidden;
+	font-family: 'Roboto Slab';
+	-webkit-transition-duration: 0.4s; /* Safari */
+	transition-duration: 0.4s;
+	}
+p1.contacts:hover {
+	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(255,255,255,0.19);
+	}
+p2.contacts{
+    text-align: center;
+	background: rgba(255,255,255,0.2);
+	border-radius: 20px;
+	height: var(--contacth); width: var(--contactw);
+	display: inline-block;
+	border: 1pv solid rgba(0,0,0,0.3);
+	border-radius: 3px;
+	overflow: hidden;
+	font-family: 'Poppins';
+}
+p2.contacts1{
+
+	text-align: left;
+	height: var(--contact2h); width: var(--contact2w);
+	margin-left: var(--contact2margin);
+	margin-top: var(--contact2margint);
+	display: inline-block;
+	border: 1pv solid rgba(0,0,0,0.3);
+	border-radius: 3px;
+	overflow: hidden;
+	font-family: 'Poppins';
+	text-shadow: 2px 2px 4px #000000;
+}
+.p2{
+    text-align: center;
+}
+.contactmain{
+    font-size: var(--emails);
+    margin-left: var(--emailml);
+}
+.contactmain2{
+    margin-left: var(--emails);
+    font-size: var(--nums);
+    text-align: left;
+}
+/*-------------------------------------------------SYMBOLS-----------------------------------------------*/
+.fab-facebook-f{
+    color: white;
+}
+.fab-twitter{
+    color: white;
+}
+.fab-instagram{
+    color: white;
+}
+.fab-linkedin{
+    color: white;
+}
+#home{
+    float: var(--homefloat);
+}
+/*---------------------------------------------------IMAGE EDTING-------------------------------------*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.img-accordion{
+    height: var(--galblockh);
+	width: var(--galblockw);
+    margin-left: var(--gallerymargin);
+    display: flex;
+    cursor: pointer;
+}
+
+.imgs{
+    flex: 1;
+    height: 100%;
+    border:1px solid #222;
+    transform: skew(5deg);
+    margin: 0 2px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    transition: all 0.3s;
+}
+
+.img1{ background-image: url('{% static 'mainapp/gal_1.jpg' %}'); }
+.img2{ background-image: url('{% static 'mainapp/gal_2.jpg' %}') }
+.img3{ background-image: url('{% static 'mainapp/gal_3.jpg' %}'); }
+.img4{ background-image: url('{% static 'mainapp/gal_4.gif' %}'); }
+
+.imgs p{
+    position: absolute;
+    bottom: 0; left: 0;
+    background-color: rgba(0,0,0,0.6);
+    padding: 10px;
+    color: #fff;
+    text-transform: uppercase;
+    font-family: "Poppins";
+    font-size: var(--galfont);
+    white-space: nowrap;
+    transform: rotate(-90deg);
+    transform-origin: 0 0;
+    transition: all 0.3s;
+}
+
+.img-accordion:hover .img{
+    transform: skew(0);
+}
+
+.imgs:hover{
+    flex: 5;
+}
+
+.imgs:hover p{
+    transform: rotate(0);
+    border:2px solid #222;
+}
+
+/*---------------------------------NEW GAL-----------------------------------*/
+
+img.one{
+    filter: drop-shadow(8px 8px 10px rgba(0,0,0,1)) ;
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+	z-index: 100;
+	}
+img{
+	margin-left: 0px;
+	z-index: 0;
+	}
+img.project{
+    position: relative;
+    margin-top: 50px;
+    margin-left: -200px;
+    z-index: 100;
+}
+img.work2{
+    filter: drop-shadow(10px 10px 12px rgba(0,0,0,1)) ;
+	display: block;
+	border-radius: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    height: var(--workh);
+    width: var(--workw);
+    z-index: 100;
+}
+div{
+	font-family: 'Roboto Slab';
+	list-style: none;
+	padding: 0;
+}
+div.con{
+    background-color: red;
+    padding: 5px;
+    width: 300px;
+}
+
+div.para{
+    margin-left: var(--paramargin);
+}
+div.paras p::before{
+	color: white;
+	content: "";
+	height: var(--parasheight);
+	width: 5px;
+	border-radius: 10px;
+	background: rgba(4, 129, 255, 0.7);
+	float: left;
+	margin-right: 20px;
+	margin-left: 30px;
+}
+div.parag p::before{
+	color: white;
+	content: "";
+	height: var(--paragheight);
+	width: 5px;
+	border-radius: 10px;
+	background: rgba(4, 129, 255, 0.7);
+	float: left;
+	margin-right: 20px;
+	margin-left: 30px;
+}
+div.parae p::before{
+	color: white;
+	content: "";
+	height: var(--paraeheight);
+	width: 5px;
+	border-radius: 10px;
+	background: rgba(4, 129, 255, 0.7);
+	float: left;
+	margin-right: 20px;
+	margin-left: 30px;
+}
+div.paraa p::before{
+	color: white;
+	content: "";
+	height: var(--paraaheight);
+	width: 5px;
+	border-radius: 10px;
+	background: rgba(4, 129, 255, 0.7);
+	float: left;
+	margin-right: 20px;
+	margin-left: 30px;
+}
+
+div.parac p::before{
+	color: white;
+	content: "";
+	height: var(--paracheight);
+	width: 5px;
+	border-radius: 10px;
+	background: rgba(4, 129, 255, 0.7);
+	float: left;
+	margin-right: 20px;
+	margin-left: 30px;
+}
+
+div.intrests{
+	margin-left: var(--intrestsmargin);
+	}
+.skills{
+	margin-left: var(--skillsmargin);
+ 	color: white;
+}
+.skills li{
+	 margin: 20px 0;
+}
+.p10{
+    margin-left: var(--percentwidth);
+    font-size: 15px;
+    display: none;
+}
+.bar2{
+	margin-top: 10px;
+	background: rgba(0, 0, 0, 0.5) ;
+	margin-left: var(--h2margin);
+	height: 5px;
+	width: var(--bar2width);
+	border: 1pv solid rgba(0,0,0,0.3);
+	border-radius: 10px;
+	overflow: hidden;
+}
+.bar{
+	margin-top: 10px;
+	width: var(--barwidth);
+	background: black;
+	display: block;
+	height: 5px;
+	border: 1pv solid rgba(0,0,0,0.3);
+	border-radius: 10px;
+	overflow: hidden;
+}
+.bar span{
+	height: 5px;
+	float: left;
+	background: #0481ff;
+}
+.html{
+    display: none;
+	width: 50%;
+	animation: html 2s;
+}
+.python{
+    display: none;
+	width: 30%;
+	animation: python 2s;
+}
+.c{
+    display: none;
+	width: 35%;
+	animation: cprogram 2s;
+}
+.cp{
+    display: none;
+	width: 35%;
+	animation: cplus 2s;
+}
+.java{
+    display: none;
+	width: 40%;
+	animation: java 2s;
+}
+.django{
+    display: none;
+	width: 30%;
+	animation: django 2s;
+}
+@keyframes html{
+	0%{
+	width: 0%;
+	}
+	100%{
+	   width: 50%;
+	}
+}
+@keyframes python{
+	0%{
+	width: 0%;
+	}
+	100%{
+	   width: 30%;
+	}
+}
+ @keyframes cprogram{
+	0%{
+	width: 0%;
+	}
+	100%{
+	   width: 35%;
+	}
+}
+@keyframes cplus{
+	0%{
+	width: 0%;
+	}
+	100%{
+	   width: 35%;
+	}
+}
+@keyframes java{
+	0%{
+	width: 0%;
+	}
+	100%{
+	   width: 40%;
+	}
+}
+@keyframes django{
+	0%{
+	width: 0%;
+	}
+	100%{
+	   width: 30%;
+	}
+}
+.button {
+	  border-radius: 100px;
+	  background-color: rgba(4, 129, 255, 0.4);
+	  border: none;
+	  color: #FFFFFF;
+	  text-align: center;
+	  font-size: 18px;
+	  padding: 18px;
+	  width: 100px;
+	  transition: all 0.5s;
+	  cursor: pointer;
+	  margin: 5px;
+	  text-shadow: 2px 2px 4px #000000;
+	}
+
+.button span {
+	  cursor: pointer;
+	  display: inline-block;
+	  position: relative;
+	  transition: 0.5s;
+	}
+
+.button span:after {
+	  content: '\00bb';
+	  position: absolute;
+	  opacity: 0;
+	  top: 0;
+	  right: -20px;
+	  transition: 0.5s;
+	}
+
+.button:hover span {
+	  padding-right: 25px;
+	}
+
+.button:hover span:after {
+	  opacity: 1;
+	  right: 0;
+	}
+
+
+
+/*--------------------------------------------------------NAVBAR---------------------------------------------*/
+
+
+.topnav {
+  overflow: hidden;
+  background-color: rgba(0,0,0,0.7);
+  position: fixed;
+  top: 0;
+  /*width: var(--navwidth);*/
+  width: 100%;
+  z-index: 100000;
+}
+
+.topnav a {
+  float: left;
+  margin-left: 20px;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #0481ff;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.topnav .icon {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child) {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .topnav.responsive {
+    position: fixed;
+    z-index: 1000;
+  }
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: center;
+  }
+}
+/*-------------------------------------------------------------------WORK SECTION------------------------------------------------------------------------------------------------------------*/
+
+.image {
+   position: relative;
+   width: 100%;
+   display: inline;
+}
+img.work{
+   filter: brightness(25%)  drop-shadow(8px 8px 10px rgba(0,0,0,1)) ;
+   border-radius: 8px;
+   margin-bottom: 30px;
+   margin-left: var(--projectmargin);
+   height: var(--projectimg);
+   width: var(--projectimg);
+}
+img.work:hover{
+    filter: brightness(50%)  drop-shadow(8px 8px 10px rgba(0,0,0,1)) ;
+}
+h4 {
+   font-size: var(--workfont);
+   font-family: 'Poppins';
+   color: white;
+   position: absolute;
+   top: -60px;
+   left: var(--knowmargin);
+   text-align: center;
+   width: var(--projectimg);
+}
+a.work{
+   font-size: 20px;
+   text-decoration: none;
+   background-color: rgba(4, 129, 255, 0.4);
+   border-radius: 20px;
+   font-family: 'Poppins';
+   padding: 10px 25px;
+   cursor: pointer;
+   color: white;
+   text-align: center;
+}
+/*-------------------------------------------POP SECTION-------------------------------------------------------------*/
+
+#popupMain{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.8);
+    z-index: 1111;
+    font-family: 'Poppins';
+}
+#popup{
+    width: var(--popupwidth);
+    height: var(--popupheight);
+    border: solid 3px;
+    /*background:  rgba(50, 55, 74, 1);*/
+    background: rgba(4, 129, 255, 0.9);
+    background-size: cover;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    border-radius: 10px;
+    transform: translate(-50%,-50%);
+}
+.close{
+    color: white;
+}
+.gray{
+	/*background-color: rgba(67, 72, 92, 1);*/
+	background-color: rgba(50, 55, 74, 1);
+	height: var(--grayh);
+	width: 100%;
+	border-radius: 7px;
+}
+#h1{
+	height: 30px;
+	color: black;
+	margin-top: 15px;
+	font-size: var(--h1ppfont);
+	text-align: center
+}
+#h2{
+    color: white;
+    font-size: 20px;
+    margin-top: -5px;
+}
+.checked {
+  color: orange;
+}
+#div1,#div2,#div3,#div4,#div5{
+	font-size: 30px;
+	align-items: center;
+	margin-top: -15px;
+}
+#write{
+    height: var(--writeh);
+    width: var(--writew);
+    margin-left: var(--writemargin);
+    margin-top: -5px;
+    /*background-color: rgba(50, 55, 74, 1);*/
+    background-color: rgba(0,0,0,0.5);
+    border-radius: 10px;
+    border: none;
+    color: white;
+}
+p16,p12,p13,p14,p15{
+    margin-left: 10px;
+    cursor: pointer;
+    color: rgba(0, 0, 0, 0.7);
+}
+#p11{
+    margin-left: var(--starmargin)
+}
+button{
+    height: var(--btnhpp);
+    width: var(--btnwpp);
+    margin-left: 14px;
+    margin-top: 20px;
+    color: black;
+    background-color: rgba(4, 129, 255, 0.9);
+    /*background-color: ;*/
+    border-radius: 5px;
+    border: none;
+    font-family: 'Poppins';
+    font-size: var(--btnppfont);
+}
+/*---------------------------------------------------------------------------XXX----------------------------------------------------------------------*/
+
+    </style>
+</head>
+<body>
+<div class="topnav" id="myTopnav">
+  <a href="/intro/#intro"><strong></strong></a>
+  <a href="/intro/#intro"><strong>Intro</strong></a>
+  <a href="/intro/#who"><strong>Who</strong></a>
+  <a href="/intro/#what"><strong>What</strong></a>
+  <a href="/intro/#work"><strong>Work</strong></a>
+  <a href="/intro/#contact"><strong>Contact</strong></a>
+  <a href="/home" id="home" style="font-size: 20px; margin-right: 10px;" class="bi bi-house-door"></a>
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
+</div>
+
+<form method="=POST">
+
+<div id="popupMain" style="display: none;">
+    <div id="popup">
+        <p id="h1"><strong>Your Opinion matters to us !</strong></p>
+
+		<div class="gray">
+            <br>
+            <p id="h2"> How was your Experience ?</p>
+
+                    <p16 href="#" id="p11" value="1">  <span id="div1" class="fa fa-star"/> </p16>
+                    <p12 href="#">  <span id="div2" class="fa fa-star"/> </p12>
+                    <p13 href="#">  <span id="div3" class="fa fa-star"/> </p13>
+                    <p14 href="#">  <span id="div4" class="fa fa-star"/> </p14>
+                    <p15 href="#">  <span id="div5" class="fa fa-star"/> </p15>
+
+            <br><br>
+            <input type="text" id="write" name="feedback" placeholder=" Leave a message, if you want">
+        <button type="submit"><strong>Submit</strong></button><button><strong>Maybe later</strong></button>
+        </div>
+    </div>
+</div>
+</form>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+
+<script>
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+
+var flag = 0;
+$(document).scroll(function() {
+  var z = $("body").height();
+  var w = z - 900;
+  var y = $(this).scrollTop();
+	if (y > w) {
+		if (flag < 1) {
+		$('#popupMain').css('display','none');
+		}
+		flag ++;
+	}
+});
+
+
+$(document).scroll(function() {
+  var a = $(this).scrollTop();
+	if (a > 700) {
+		$('.html').css('display','block');
+		$('.python').css('display','block');
+		$('.c').css('display','block');
+		$('.cp').css('display','block');
+		$('.java').css('display','block');
+		$('.django').css('display','block');
+		$('.p10').css('display','block');
+	}
+});
+
+$(document).ready(function(){
+  $("p11").click(function(){
+    $("#div1").addClass("checked");
+  });
+  $("p12").click(function(){
+    $("#div1").addClass("checked");$("#div2").addClass("checked");
+  });
+   $("p13").click(function(){
+    $("#div1").addClass("checked");$("#div2").addClass("checked");$("#div3").addClass("checked");
+  });
+   $("p14").click(function(){
+    $("#div1").addClass("checked");$("#div2").addClass("checked");$("#div3").addClass("checked");$("#div4").addClass("checked");
+  });
+   $("p15").click(function(){
+    $("#div1").addClass("checked");$("#div2").addClass("checked");$("#div3").addClass("checked");$("#div4").addClass("checked");$("#div5").addClass("checked");
+  });
+});
+
+
+$('button').one("click", function(){
+    $('#popupMain').css('display','none');
+
+    });
+</script>
+
+
+{% block body %}
+{% endblock %}
+</body>
+</html>

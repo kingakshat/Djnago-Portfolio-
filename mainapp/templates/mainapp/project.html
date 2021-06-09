@@ -1,0 +1,86 @@
+{% extends 'mainapp/base2.html' %}
+{% load static %}
+<html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PROJECT|AKSHAT</title>
+</head>
+<body>
+{% block body %}
+<header>
+<br><br>
+{% if c == 1 %}
+    {% for one in one_list %}
+
+    <h1><strong>{{ one.one_name }}</strong></h1>
+
+    <p class="main">{{ one.one_distwo }}</p>
+<br><br>
+    <p2>Date</p2>
+    <p3>Deliverables</p3>
+<br>
+    <p2><strong>{{ one.one_date }}</strong></p2>
+    <p3><strong>{{ one.one_del }}</strong></p3>
+<br><br><br><br>
+    <p4>Team</p4>
+    <br>
+    {% for onet in onet_list %} <p4> &#9679 <strong>{{ onet.one_team }}</strong></p4> <br>{% endfor %}
+    <br>
+<img class="work2"  src="{% static 'mainapp/pro_1.gif' %}"/>
+
+    {% endfor %}
+{% endif %}
+
+{% if c == 2 %}
+    {% for two in two_list %}
+     <h1><strong>{{ two.two_name }}</strong></h1>
+
+    <p class="main">{{ two.two_distwo }}</p>
+<br><br>
+    <p2>Date</p2>
+    <p3>Deliverables</p3>
+<br>
+    <p2><strong>{{ two.two_date }}</strong></p2>
+    <p3><strong>{{ two.two_del }}</strong></p3>
+<br><br><br><br>
+    <p4>Team</p4>
+    <br>
+    {% for twot in twot_list %} <p4> &#9679 <strong>{{ twot.two_team }}</strong></p4> <br>{% endfor %}
+<br>
+    <img class="work2"  src="{% static 'mainapp/pro_2.gif' %}"/>
+   <!---"" DIRECT YOUTUBE PLAY "" <iframe class="work2" src="https://youtu.be/GGIJEm3kg6k"></iframe>
+<br><br><br>
+
+    {% endfor %}
+{% endif %}
+
+{% if c == 3 %}
+    {% for three in three_list %}
+
+     <h1><strong>{{ three.three_name }}</strong></h1>
+
+    <p class="main">{{ three.three_distwo }}</p>
+<br><br>
+    <p2>Date</p2>
+    <p3>Deliverables</p3>
+<br>
+    <p2><strong>{{ three.three_date }}</strong></p2>
+    <p3><strong>{{ three.three_del }}</strong></p3>
+<br><br><br><br><br>
+    <p4>Team</p4>
+    <br>
+    {% for threet in threet_list %} <p4> &#9679 <strong>{{ threet.three_team }}</strong></p4> <br>{% endfor %}
+<br>
+    <img class="work2"  src="{% static 'mainapp/pro_3.gif' %}"/>
+
+<br><br><br>
+
+    {% endfor %}
+{% endif %}
+<br><br><br>
+</header>
+<p id="last">Copyright @2020 Akshat Shirsat All rights reserved</p>
+{% endblock %}
+</body>
+</html>

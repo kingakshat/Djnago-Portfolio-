@@ -1,0 +1,328 @@
+{% load static %}
+<html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Krona One">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+    <link rel = "icon" href="{% static 'mainapp/LOGO_2.png' %}" type="image/x-png">
+
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+
+
+    <title>AKSHAT SHIRSAT</title>
+<style>
+/*--------------------------------------------FIRST PAGE BODY AND BACKGROUND ----------------------------*/
+ body {
+    background-position: 70% 0%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    overflow: hidden;
+    background-color: black;
+    background-image: url('{% static 'mainapp/back_1.jpeg' %}');
+
+}
+
+/*--------------------------------------MOBILE SCREEN VIEW------------------------------------------*/
+        :root {
+            --namebr: inline;
+            --newdisplay: none;
+            --headerpl: -7%;
+            --headerpt: 20%;
+            --spinmargin: 45px;
+            --h1size: 40px;
+            --h3size: 18px;
+            --btnfont: 30px;
+            --btnml: 8%;
+            --symsize: 15px;
+            --sympadding: 15px;
+            --symmargin: 45px;
+            --0t: 0px;
+            --25t: -21px;
+            --50t: -42px;
+            --75t: -64px;
+            --spinheight: 18px;
+            --btnmargin: 60px;
+            --mill: none;
+
+            --bgimg: {% static 'mainapp/back_1.jpeg' %};
+
+        }
+
+/*-------------------------------------DECKTOP SCREEN VIEW---------------------------------------------*/
+        @media screen and (min-width: 750px) {
+         :root {
+            --namebr: none;
+            --newdisplay: block;
+            --headerpl: 9%;
+            --headerpt: 10%;
+            --spinmargin: 40px;
+            --h1size: 50px;
+            --h3size: 28px;
+            --btnfont: 25px;
+            --btnml: 25%;
+            --symsize: 17px;
+            --sympadding: 20px;
+            --spinheight: 30px;
+            --symmargin: 70px;
+            --0t: 0px;
+            --25t: -33px;
+            --50t: -66px;
+            --75t: -99px;
+            --btnmargin: 150px;
+            --mill: block;
+
+            --bgimg: {% static 'mainapp/back_3.jpg' %};
+
+         }
+        }
+/*---------------------------------------------START------------------------------------------------------------*/
+header{
+    border-radius: 10px;
+    height: 590px;
+    width: 1260px;
+	  position: fixed;
+    bottom: var(--headerpt);
+	  left: var(--headerpl);
+	  overflow: hidden;
+
+    animation: fadeInAnimation ease 3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+@keyframes fadeInAnimation {
+    0% {  opacity: 0; }
+    100% {  opacity: 1; }
+        }
+/*--------------------------------------------------TEXT-------------------------------------------------*/
+.name{
+    display: var(--namebr);
+}
+h1{
+	color: #d0d0d0;
+	font-size: var(--h1size);
+	font-family: 'Krona One';
+	font-weight: bold;
+	margin-left: 40px;
+	color: white;
+	text-shadow: 2px 2px 4px #000000;
+}
+
+h3{
+	text-transform: uppercase;
+	color: white;
+	font-family: 'Krona One';
+	font-weight: bold;
+	font-size: var(--h3size);
+	word-spacing: 20px;
+	text-shadow: 2px 2px 4px #000000;
+}
+
+p{
+	color: white;
+	z-index: 100000;
+}
+p::first-letter {
+	font-size: 200%;
+	color: #0481ff;
+	font-family: 'Krona One';
+	font-weight: bold;
+
+}
+p1{
+    word-spacing: 25px;
+    margin-left: var(--symmargin);
+}
+
+img.new{                                                /*-----------NEW--------------*/
+    display: var(--newdisplay);
+    position: fixed;
+    right: 1%;
+    top: 2%;
+    filter: drop-shadow(10px 10px 12px rgba(0,0,0,1));                              /*-----------NEW--------------*/
+    z-index: 0-1;
+}
+p2.last{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 10px;
+    text-align: center;
+}
+
+div.spin{
+    margin-left: var(--spinmargin);
+	display: inline-block;
+	height: var(--spinheight);
+	width: 100%;
+	overflow: hidden;
+	color: #d0d0d0;
+}
+span{
+	display: inline-block;
+	animation: rotate 10s infinite;
+}
+span1{
+    display: var(--mill);
+}
+@keyframes rotate{
+	0%{ transform: translateY(var(--0t)); }
+	25%{ transform: translateY(var(--25t)); }
+	50%{ transform: translateY(var(--50t)); }
+	75%{ transform: translateY(var(--75t)); }
+	100%{ transform: translateY(var(--0t)); }
+}
+
+div.btn{
+    margin-top: 50px;
+    position: fixed;
+    bottom: 10%;
+    left: var(--btnml);
+    color: white;
+}
+.button1 {
+  border-radius: 4px;
+  background-color: rgba(4, 129, 255, 0.6);
+  border: none;
+  color: white;
+  text-align: center;
+  font-size: var(--btnfont);
+  padding: 18px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  font-family: 'Krona One';
+}
+.button1 span1 {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+  color: white;
+}
+
+.button1 span1:after {
+  content: '\00ab';
+  text-shadow: 2px 2px 4px #000000;
+  margin-left: 5px;
+  color: white;
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: 20px;
+  transition: 0.2s;
+}
+
+.button1:hover span1 {
+  padding-right: 25px;
+}
+
+.button1:hover span1:after {
+  opacity: 1;
+  right: 0;
+}
+a.link{
+    color: white;
+    text-decoration: none;
+    text-shadow: 2px 2px 4px #000000;
+}
+/*-------------------------------------------------SYMBOLS-----------------------------------------------*/
+
+
+.bi {
+    padding: var(--sympadding);
+    font-size: var(--symsize);
+    text-align: center;
+    text-decoration: none;
+	border-radius: 40px;
+	background-color: rgba(0,0,0,0.5);
+	color: white;
+}
+.bi:hover {
+    opacity: 0.5;
+    color: #0481ff;
+}
+
+.container{
+	width: 40%;
+	display: flex;
+	justify-content: space_between;
+	transform: translate(-50%,-50%);
+}
+a{
+	width: 60px; height: 60px;
+	transition: all 0.5s;
+	transition-delay: 0.1s;
+	text-decoration: none;
+}
+i{
+	font-size: 20px;
+	margin-top: -5px;
+	transition: all 0.5s;
+	transition-delay: 0.1s;
+	transform: translate(-50%,-50%)
+}
+
+/*---------------------------------------------IMAGES & STATIC FILES-------------------------------------*/
+
+
+/*---------------------------------------------BACKGROUND NEW----------------------------------*/
+
+.bg {
+  animation:slide 28s ease-in-out infinite alternate;
+  background-image: linear-gradient(-60deg,  rgba(4, 129, 255, 0.8) 50%, #1E1E1E 50%);
+  bottom:0;
+  left:-50%;
+  opacity:.5;
+  position:fixed;
+  right:-50%;
+  top:0;
+  z-index:-1;
+}
+
+.bg2 {
+  animation-direction:alternate-reverse;
+  animation-duration:29s;
+}
+
+.bg3 {
+  animation-duration:30s;
+}
+
+@keyframes slide {
+  0% {
+    transform:translateX(-25%);
+  }
+  100% {
+    transform:translateX(25%);
+  }
+}
+
+
+
+/*-------------------------------------------------------------XXX----------------------------------------------------------------------*/
+</style>
+</head>
+<body>
+
+{% block body %}
+
+
+{% endblock %}
+</body>
+</html>
+
+
+

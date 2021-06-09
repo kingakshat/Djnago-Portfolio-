@@ -1,0 +1,226 @@
+{% extends 'mainapp/base2.html' %}
+{% load static %}
+<html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PROJECT|AKSHAT</title>
+</head>
+<body>
+{% block body %}
+<!--------------------------------------------------POP SECTION--------------------------------------------------->
+
+
+<header>
+{% for look in looks_list %}
+    <br><br><br>
+   <img id="intro" class="one" height="220px" src="{% static 'mainapp/main1.jpg' %}"/>
+<br>
+    <p class="main"><b>{{ look.look_mintro }}</b></p>
+    <p class="main"><q>{{ look.look_fdis }}</q></p>
+
+<br><br>
+</header>
+<br><br>
+<!----------------------------------------------------------------------------------WHO SECTION------------------------------------------------------------------------------------------>
+<header>
+    <h1 id="who">......<strong> W H O </strong>......</h1>
+<br><br><br><br>
+    <h2> MY SKILLS</h2>
+    <div class="bar2"></div>
+<!----------------------------SKILLS SECTION START------------------------------------>
+<section class="services">
+	<div class="container">
+		<div class="service-cards-wrapper">
+			<div class="service-card">
+				<div class="icon-container">
+                  <i class="bi bi-journal-code"></i>
+                </div>
+                
+                <p91><span style="font-size: 25px;">Languages</span><br><br>Python 	<br> JAVA 	<br> C / C++ </p91>
+		</div>
+		<div class="service-card">
+			<div class="icon-container">
+              <i class="bi bi-server"></i>
+            </div>
+			<p91><span style="font-size: 25px;">Web-Developmnet</span><br><br>Django 	<br> Node  Js 	<br> HTML / CSS</p91>
+			
+		</div>
+		<div class="service-card">
+			<div class="icon-container">
+              <i class="bi bi-award"></i>
+            </div>
+			<p91><span style="font-size: 25px;">Other Skills</span><br><br>MySQL 	<br> Python Image Proccesing 	<br> Cisco Packet Tracer</p91>
+		</div>
+	</div>
+</div>
+</section>
+<!----------------------------SKILLS  SECTION  END------------------------------------>
+	
+<br><br><br>
+    <h2>INTEREST</h2>
+    <div class="bar2"></div>
+<br>
+  <div class="intrests">
+
+      <p1 class="intrests"><i class="bi bi-terminal-fill" style="color: orange; float: left; margin-top: 0px;"></i>PROGRAMING</p1>
+      <p1 class="intrests"><i class="bi bi-trophy" style="color: #0481ff; float: left; margin-top: 0px;"></i>CRICKET</p1>
+      <p1 class="intrests"><i class="bi bi-bicycle" style="color: yellow; float: left; margin-top: 0px;"></i>FITNESS</p1>
+<br>  <p1 class="intrests"><i class="bi bi-earbuds" style="color: #1DB954; float: left; margin-top: 0px;"></i>MUSIC</p1>
+      <p1 class="intrests"><i class="bi bi-lightning" style="color: red; float: left; margin-top: 0px;"></i>COMICS</p1>
+      <p1 class="intrests"><i class="bi bi-hourglass-split" style="color: orange; float: left; margin-top: 0px;"></i>HISTORY</p1>
+  </div>
+<br><br><br><br>
+</header>
+<br><br>
+
+<!-----------------------------------------------------------------------------------WHAT SECTION----------------------------------------------------------------------------------------->
+
+<header>
+    <h1 id="what">......<strong> W H A T </strong>......</h1>
+<br><br><br>
+<div class="para">
+<div class="paras">
+    <h3 class="big">What i am studing</h3>
+    <p class="what">{% for studing in studing_list %} <span8 style='font-size:20px; color: rgb(4, 129, 255);'>&#9679</span8> {{ studing.studing_a }}<br>{% endfor %}</p>
+<br>
+</div>
+<div class="parag">
+    <h3 class="big">What are my Gols</h3>
+    <p class="what"> <span8 style='font-size:20px; color: rgb(4, 129, 255);'>&#9679</span8> {{ look.look_wgol }}</p>
+</div>
+<br>
+
+
+<div class="parac">
+    <h3 class="big">What are my experinces</h3>
+    <p class="what">{% for exp in exp_list %}<span8 style='font-size:20px; color: rgb(4, 129, 255);'>&#9679</span8> {{ exp.exp_a }} <a href="{% static 'mainapp/INTERNSHIP_AKSHAT_SHIRSAT_ALOK_2021.pdf' %}" class="see">See More</a><br>{% endfor %}</p>
+<br>
+</div>
+
+<div class="parae">
+    <h3 class="big">What Courses i have completed </h3>
+    <p class="what">{% for course in cou_list %} <span8 style='font-size:20px; color: rgb(4, 129, 255);'>&#9679</span8> {{ course.course_a }}<br>{% endfor %}</p>
+<br>
+</div>
+
+<div class="paraa">
+    <h3 class="big">What I have achivecd</h3>
+    <p class="what">{% for achivment in ach_list %} <span8 style='font-size:20px; color: rgb(4, 129, 255);'>&#9679</span8> {{ achivment.achivment_a }}<br>{% endfor %}
+    </p>
+</div>
+</div>
+<br><br><br><br><br>
+<div align="center">
+        <a class="button" href="{% static 'mainapp/AKSHAT SHIRSAT.pdf' %}"><span>Download My resume</span></a>
+</div>
+
+<br><br><br><br>
+
+</header>
+<br><br>
+
+<!--------------------------------------------------------------------------WORK SECTION--------------------------------------------------------------------------->
+
+<header>
+    <h1 id="work">......<strong> W O R K </strong>......</h1>
+<br><br><br><br>
+    <h2>MY PROJECTS</h2>
+    <div class="bar2"></div>
+<br><br><br><br>
+
+<div class="image">
+
+      <img class="work" src="{% static 'mainapp/pro_1.gif' %}"/>
+
+      <h4><strong>{% for one in one_list %}{{ one.one_name }}{% endfor %}</strong><br><br><br><br><a class="work" href="/one">know more</a></h4>
+
+</div>
+<div class="image">
+	<img class="work" src="{% static 'mainapp/pro_2.gif' %}"/>
+
+      <h4><strong>{% for two in two_list %}{{ two.two_name }}{% endfor %}</strong><br><br><br><a class="work" href="/two">know more</a></h4>
+
+</div>
+<div class="image">
+	<img class="work" src="{% static 'mainapp/pro_3.gif' %}"/>
+
+    <h4><strong>{% for three in three_list %}{{ three.three_name }}{% endfor %}</strong><br><br><br><a class="work" href="/three">know more</a></h4>
+</div>
+
+
+
+<br><br><br><br><br>
+    <h2>PHOTO GALLERY</h2>
+    <div class="bar2"></div>
+<br><br><br>
+
+
+<!------------------------------------------NEW GAL---------------------->
+
+<div class="img-accordion">
+    <div class="imgs img1">
+        <p> My Passion</p>
+    </div>
+    <div class="imgs img2">
+        <p> MU Intercollege 2020</p>
+    </div>
+    <div class="imgs img3">
+        <p> LTCOE Team</p>
+    </div>
+    <div class="imgs img4">
+        <p> College Project</p>
+    </div>
+  <!---  <div class="imgs img5">
+        <p> </p>
+    </div>--->
+</div>
+
+
+<br><br><br><br><br>
+{% endfor %}
+</header>
+
+<!----------------------------CONTACT-------------------------------------------------->
+
+<!----------------------------NEW CONTACT-------------------------------------------------->
+<header>
+    <h1 id="contact">...... CONTACT ......</h1>
+
+<br><br><br>
+<form action="" method="post">
+	{% csrf_token %}
+<p2 class="contacts1">
+    <p23 style="margin-left: 10px;"><i style="color: #0481ff; font-size: 25px;" class="bi bi-envelope-open"></i></p23>
+    <div class="bar2" style="margin-left: 15px; margin-bottom: 20px;"></div>
+    <span class="contactmain"><strong>akshatshirsat77@gmail.com</strong></span><br><br>
+   <p23 style="margin-left: 10px;"> <i style="color: #0481ff; font-size: 25px;" class="bi bi-telephone-inbound-fill"></i></p23>
+    <div class="bar2" style="margin-left: 15px; margin-bottom: 20px;"></div>
+    <span class="contactmain"><strong>+91 8850128117</strong></span>
+</p2>
+    <p2 class="contacts">
+        <br>
+        <p19>{{form}}</p19>
+    <br><br>
+	<input class="button" type="submit">
+    </p2>
+</form>
+
+<br><br><br><br>
+    <p1 class="symbol">
+        <a href="https://www.facebook.com/akshat.shirsat.7/"><i style="color: white;" class="bi bi-facebook"></i></a>
+        <a href="https://twitter.com/KingAkshat071"><i style="color: white;" class="bi bi-twitter"></i></a>
+        <a href="https://www.instagram.com/king_akshat_07/"><i style="color: white;" class="bi bi-instagram"></i></a>
+        <a href="https://www.linkedin.com/in/akshat-shirsat-998693177/"><i style="color: white;" class="bi bi-linkedin"></i></a>
+        <a href="https://github.com/kingakshat"><i style="color: white;" class="bi bi-github"></i></a>
+    </p1>
+    <br><br><br>
+<!--------------------------------------------------------END------------------------------------------------------->
+</header>
+
+<p id="last">Copyright @2020 Akshat Shirsat All rights reserved</p>
+
+
+{% endblock %}
+</body>
+</html>
