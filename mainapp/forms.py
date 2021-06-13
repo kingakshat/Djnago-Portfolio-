@@ -5,6 +5,8 @@ class CustomerForm(ModelForm):
 	class Meta:
 		model = Feedback
 		fields = '__all__'
+		#print(fields, model)
+		
 
 
 

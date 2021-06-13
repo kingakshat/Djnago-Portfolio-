@@ -45,6 +45,7 @@ def intro(request):
         form = CustomerForm(request.POST)
         if form.is_valid():
             form.save()
+            #print(CustomerForm(request.POST))
             return HttpResponseRedirect("/intro/#contact")
 
     context = {
