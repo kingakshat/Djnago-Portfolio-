@@ -19,6 +19,10 @@ backup_n = []
 backup_m = []
 backup_msg = []
 
+backup_n = []
+backup_m = []
+backup_msg = []
+
 def test(request):
     print(backup_n,backup_m,backup_msg)
     context = {
@@ -53,7 +57,11 @@ def intro(request):
     if request.method == 'POST':
         form = CustomerForm(request.POST)
         if form.is_valid():
+<<<<<<< HEAD
             form.save() 
+=======
+            form.save()
+>>>>>>> 32597d29388529ecfa025985a224dacace74ff8c
             backup_n.append(form.cleaned_data['Name'])
             backup_m.append(form.cleaned_data['Mail'])
             backup_msg.append(form.cleaned_data['Your_Message'])
