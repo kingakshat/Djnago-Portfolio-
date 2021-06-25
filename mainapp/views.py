@@ -15,9 +15,18 @@ from .models import threet
 from .forms import CustomerForm
 from django.views.decorators.csrf import csrf_exempt
 
+backup_n = []
+backup_m = []
+backup_msg = []
 
 def test(request):
-    return render(request, 'mainapp/test.html')
+    print(backup_n,backup_m,backup_msg)
+    context = {
+        "backup_n": backup_n,
+        'backup_m': backup_n,
+        'backup_msg': backup_msg,
+    }
+    return render(request, 'mainapp/test.html', context)
 
 
 def firstpage(request):
@@ -44,10 +53,11 @@ def intro(request):
     if request.method == 'POST':
         form = CustomerForm(request.POST)
         if form.is_valid():
-            form.save()
-            #print(CustomerForm(request.POST))
+            form.save() 
+            backup_n.append(form.cleaned_data['Name'])
+            backup_m.append(form.cleaned_data['Mail'])
+            backup_msg.append(form.cleaned_data['Your_Message'])
             return HttpResponseRedirect("/intro/#contact")
-
     context = {
         'looks_list': looks_list,
         'studing_list': studing_list,
@@ -60,6 +70,7 @@ def intro(request):
         'form': form
     }
     return render(request, 'mainapp/intro.html', context)
+
 
 
 def project_one(request):

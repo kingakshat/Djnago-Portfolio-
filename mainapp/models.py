@@ -109,5 +109,5 @@ class Feedback(models.Model):
 
     def __str__(self):
         return self.Name + '// ' + self.Mail
-    print(Name, Mail, Your_Message)
+        #print(self.Name, self.Mail, self.Your_Message)
 
