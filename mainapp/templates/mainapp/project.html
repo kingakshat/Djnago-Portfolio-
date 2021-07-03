@@ -24,11 +24,17 @@
     <p3><strong>{{ one.one_del }}</strong></p3>
 <br><br><br><br>
     <p4>Team</p4>
-    <br>
+    <br><br><br><br>
     {% for onet in onet_list %} <p4> &#9679 <strong>{{ onet.one_team }}</strong></p4> <br>{% endfor %}
     <br>
-<img class="work2"  src="{% static 'mainapp/pro_1.gif' %}"/>
 
+    <!--<iframe  style="margin-left: 100px;"    width="550" height="441" src="https://www.youtube.com/embed/T-lQWuZA-gM"></iframe> 
+    -->
+
+    <div class="containerframe"> 
+        <iframe class="responsive-iframe" src="https://www.youtube.com/embed/T-lQWuZA-gM"></iframe>
+    </div>
+    
     {% endfor %}
 {% endif %}
 
@@ -48,10 +54,15 @@
     <br>
     {% for twot in twot_list %} <p4> &#9679 <strong>{{ twot.two_team }}</strong></p4> <br>{% endfor %}
 <br>
-    <img class="work2"  src="{% static 'mainapp/pro_2.gif' %}"/>
-   <!---"" DIRECT YOUTUBE PLAY "" <iframe class="work2" src="https://youtu.be/GGIJEm3kg6k"></iframe>
-<br><br><br>
+    <!---<img class="work2"  src="{% static 'mainapp/pro_2.gif' %}"/>---->
+	<br><br><br>
 
+    <div class="containerframe"> 
+        <iframe class="responsive-iframe" src="https://www.youtube.com/embed/Oh5Z66Xt_X8"></iframe>
+    </div>
+    
+<br><br><br>
+	
     {% endfor %}
 {% endif %}
 
@@ -72,7 +83,14 @@
     <br>
     {% for threet in threet_list %} <p4> &#9679 <strong>{{ threet.three_team }}</strong></p4> <br>{% endfor %}
 <br>
-    <img class="work2"  src="{% static 'mainapp/pro_3.gif' %}"/>
+
+<!-----
+<div class="containerframe"> 
+    <iframe class="responsive-iframe" src="https://www.youtube.com/embed/Oh5Z66Xt_X8"></iframe>
+</div>
+-->
+
+
 
 <br><br><br>
 
@@ -80,7 +98,8 @@
 {% endif %}
 <br><br><br>
 </header>
-<p id="last">Copyright @2020 Akshat Shirsat All rights reserved</p>
+<br>
+<!--<p id="last">Copyright @2020 Akshat Shirsat All rights reserved</p>--->
 {% endblock %}
 </body>
 </html>

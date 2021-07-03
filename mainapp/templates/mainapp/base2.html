@@ -23,7 +23,8 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
 
-    <link rel = "icon" href="{% static 'mainapp/LOGO_2.png' %}" type="image/x-png">
+    <link rel = "icon" href="{% static 'mainapp/LOGO_1.png' %}" type="image/x-png">
+    
 
     <style>
         body {
@@ -107,6 +108,11 @@
 	         --iconml: 8px;
              --iconmb: 5px;	
              --seebtnm: 30px;
+             --frameh: 170px;
+             --framew: 300px;
+             --framem: 20px;
+             --framemt: 0px;
+             --utfml: 35px;
                 }
 
 /*-------------------------------------DECKTOP SCREEN VIEW---------------------------------------------*/
@@ -176,6 +182,11 @@
 	         --iconml: 40px;
              --iconmb: 8px;
              --seebtnm: 80px;
+             --frameh: 560px;
+             --framew: 900px;
+             --framem: 160px;
+             --framemt: 100px;
+             --utfml: 135px;
          }
         }
 /*---------------------------------------------SECOND BACKGROUND PLAIN----------------------------------------------------*/
@@ -906,6 +917,34 @@ a.work{
    color: white;
    text-align: center;
 }
+/*iframe{
+    margin-left: var(--framem);
+    margin-top: var(--framemt);
+    float: left;
+    height: var(--frameh);
+    width: var(--framew);
+}*/
+
+.containerframe {
+  position: relative;
+  width: 80%;
+  margin-left: var(--utfml);
+  overflow: hidden;
+  padding-top: 44.8%; 
+  
+}
+
+.responsive-iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
 /*-------------------------------------------POP SECTION-------------------------------------------------------------*/
 
 #popupMain{

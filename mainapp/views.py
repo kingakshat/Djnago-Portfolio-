@@ -19,9 +19,6 @@ backup_n = []
 backup_m = []
 backup_msg = []
 
-backup_n = []
-backup_m = []
-backup_msg = []
 
 def test(request):
     print(backup_n,backup_m,backup_msg)
