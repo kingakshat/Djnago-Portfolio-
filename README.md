@@ -1,2 +1,3 @@
 # Portfolio
-Final 6/9/2021
+Personal Portfolio wabepage built with Djnago and HTML CSS,
+Hosted on Herokuapp, >> akshatshirsat.herokuapp.com
